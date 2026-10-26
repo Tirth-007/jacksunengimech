@@ -1,0 +1,12 @@
+{
+  "name": "Jacksun Engimech",
+  "short_name": "JEC",
+  "description": "Engineering and industrial supply solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#12366b",
+  "icons": [
+    { "src": "/assets/logo-tight.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,1 @@
+JEC client-logo monochrome test. These are separate test variants; original logo files are unchanged. Visible logo pixels are recolored to JEC deep navy (#152D4B) while original transparency/alpha is preserved. Review brand-use requirements before production use.
