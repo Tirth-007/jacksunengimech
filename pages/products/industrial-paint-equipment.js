@@ -9,35 +9,74 @@ import { motion, useReducedMotion } from "framer-motion";
 function PaintHeroArtwork() {
     const reduceMotion = useReducedMotion();
 
+
     const logoAnimation = reduceMotion
         ? { opacity: 1, scale: 1 }
         : {
-            opacity: [0, 1, 1, 0, 0, 0],
-            scale: [0.8, 1, 1, 0.72, 0.72, 0.72],
+            opacity: [0, 1, 1, 0, 0],
+            scale: [0.8, 1, 1, 0.8, 0.8],
         };
 
     const ringAnimation = reduceMotion
         ? { opacity: 1, scale: 1 }
         : {
-            opacity: [0, 0, 1, 1, 0, 0],
-            scale: [0.9, 0.9, 1, 1, 1, 0.9],
+            opacity: [0, 0, 1, 1, 0],
+            scale: [0.9, 0.9, 1, 1, 1],
         };
+
+    // const ringAnimation = reduceMotion
+    //     ? { opacity: 1, scale: 1 }
+    //     : {
+    //         opacity: [0, 0, 1, 1, 1],
+    //         scale: [0.9, 0.9, 1, 1, 1],
+    //     };
 
     const gunAnimation = reduceMotion
         ? { opacity: 1, scale: 1, y: 0, rotate: 0 }
         : {
-            opacity: [0, 0, 0, 1, 1, 0],
-            scale: [0.22, 0.22, 0.22, 1, 1, 0.22],
-            y: [18, 18, 18, 0, -3, 18],
-            rotate: [0, 0, 0, 0, 0.5, 0],
+            opacity: [0, 0, 0, 1, 0],
+            scale: [0.22, 0.22, 0.22, 1, 1],
+            y: [18, 18, 18, 0, -3],
+            rotate: [0, 0, 0, 0, 0.5],
         };
 
     const loopTransition = {
         duration: 12,
-        times: [0, 0.08, 0.36, 0.48, 0.86, 1],
+        times: [0, 0.08, 0.36, 0.48, 1],
         repeat: Infinity,
         ease: "easeInOut",
     };
+
+
+    // const logoAnimation = reduceMotion
+    //     ? { opacity: 1, scale: 1 }
+    //     : {
+    //         opacity: [0, 1, 1, 0, 0, 0],
+    //         scale: [0.8, 1, 1, 0.72, 0.72, 0.72],
+    //     };
+
+    // const ringAnimation = reduceMotion
+    //     ? { opacity: 1, scale: 1 }
+    //     : {
+    //         opacity: [0, 0, 1, 1, 0, 0],
+    //         scale: [0.9, 0.9, 1, 1, 1, 0.9],
+    //     };
+
+    // const gunAnimation = reduceMotion
+    //     ? { opacity: 1, scale: 1, y: 0, rotate: 0 }
+    //     : {
+    //         opacity: [0, 0, 0, 1, 1, 0],
+    //         scale: [0.22, 0.22, 0.22, 1, 1, 0.22],
+    //         y: [18, 18, 18, 0, -3, 18],
+    //         rotate: [0, 0, 0, 0, 0.5, 0],
+    //     };
+
+    // const loopTransition = {
+    //     duration: 12,
+    //     times: [0, 0.08, 0.36, 0.48, 0.86, 1],
+    //     repeat: Infinity,
+    //     ease: "easeInOut",
+    // };
 
     return (
         <div
@@ -56,23 +95,19 @@ function PaintHeroArtwork() {
 
             <div className="paint-logo-stage">
                 {/* Combined dealership logo — visible at the start and end of the cycle */}
-                
+                <motion.img
+                    className="paint-combined-dealer-logo"
+                    src="/assets/devilbiss-jec-combined-logo.png"
+                    alt="DeVilbiss and Jacksun Engimech authorised-dealer branding"
+                    initial={reduceMotion ? false : { opacity: 0, scale: 0.8 }}
+                    animate={logoAnimation}
+                    transition={loopTransition}
+                />
             </div>
 
 
-            
-
-            <motion.img
-                className="paint-combined-dealer-logo"
-                src="/assets/devilbiss-jec-combined-logo.png"
-                alt="DeVilbiss and Jacksun Engimech authorised-dealer branding"
-                initial={reduceMotion ? false : { opacity: 0, scale: 0.8 }}
-                animate={logoAnimation}
-                transition={loopTransition}
-            />
-
             {/* Phase 2: coloured orbital rings */}
-            
+
 
             <motion.div
                 className="paint-art-rings"
@@ -88,7 +123,7 @@ function PaintHeroArtwork() {
 
             {/* Phase 3: product reveal */}
             {/* Spray gun — enters after the rings appear */}
-            
+
             <motion.img
                 className="paint-real-spray-gun"
                 src="/assets/products/devilbiss-spray-gun.png"
