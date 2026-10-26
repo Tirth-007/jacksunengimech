@@ -387,10 +387,27 @@ export default function IndustrialPaintEquipmentPage() {
 
                     <div className="paint-brand-content">
                         <div className="paint-brand-mark">
+                            <span className="paint-brand-mark-label">
+                                BRAND IDENTIFICATION / 001
+                            </span>
+
+                            <img
+                                className="paint-brand-logo"
+                                src="/assets/DeVilbiss-Authorised-Dealer-Logo.png"
+                                alt="DeVilbiss"
+                            />
+
+                            <span className="paint-brand-mark-footer">
+                                INDUSTRIAL PAINT EQUIPMENT
+                            </span>
+
+                            <i aria-hidden="true" />
+                        </div>
+                        {/* <div className="paint-brand-mark">
                             <span>De</span>
                             <span>Vilbiss</span>
                             <i />
-                        </div>
+                        </div> */}
 
                         <div className="paint-brand-copy">
                             <p className="eyebrow">IDENTIFIED IN JEC PROFILE</p>

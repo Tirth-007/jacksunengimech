@@ -8513,6 +8513,105 @@ css
 
 
 
+/* DeVilbiss brand specimen panel */
+.paint-brand-mark {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 300px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.paint-brand-mark-label,
+.paint-brand-mark-footer {
+  position: relative;
+  z-index: 1;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.paint-brand-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 90%;
+  max-width: 390px;
+  max-height: 175px;
+  height: auto;
+  object-fit: contain;
+  align-self: center;
+}
+
+
+/* .paint-brand-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 76%;
+  max-width: 340px;
+  max-height: 150px;
+  height: auto;
+  object-fit: contain;
+  align-self: center;
+} */
+
+/* Restrained engineering registration detail */
+.paint-brand-mark::before,
+.paint-brand-mark::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.paint-brand-mark::before {
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--teal);
+  border-right: 1px solid var(--teal);
+}
+
+.paint-brand-mark::after {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--teal);
+  border-left: 1px solid var(--teal);
+}
+
+.paint-brand-mark i {
+  position: absolute;
+  right: -35px;
+  bottom: -55px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(21, 45, 75, 0.10);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .paint-brand-mark {
+    min-height: 240px;
+    padding: 18px;
+  }
+
+  .paint-brand-logo {
+    width: 82%;
+    max-height: 120px;
+  }
+}
+
+
+
 
 /* DeVilbiss artwork — Option 1: Chromatic Halo */
 
