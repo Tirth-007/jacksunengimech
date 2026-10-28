@@ -7661,12 +7661,14 @@ css
 
 
 /* Product overview image integration — append to the END of styles/globals.css */
-.products-section .product-row {
+
+
+/* .products-section .product-row {
   grid-template-columns: 42px 76px 132px minmax(180px, 1fr) minmax(180px, 1fr) 28px;
   gap: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+} */
 
 .products-section .product-row-image {
   /* display: flex;
@@ -7677,7 +7679,7 @@ css
   overflow: hidden;
   background: #e7e7df;
   border: 1px solid rgba(21, 45, 75, .10); */
-   width: 96px;
+   /* width: 96px;
     height: 76px;
     object-fit: contain;
     background: transparent;
@@ -7735,7 +7737,7 @@ css
   .products-section .product-type,
   .products-section .product-detail {
     display: none;
-  }
+  } */
 
   .products-section .product-name {
     font-size: clamp(17px, 4.5vw, 22px);
@@ -7803,15 +7805,14 @@ css
 
 
 
-
-/* Keep the category label in a consistent position */
-.products-section .product-row {
+/* Keep the category label in a consistent position — product page only */
+.products-page .products-section .product-row {
   grid-template-columns: 42px 96px 132px minmax(180px, 1fr) minmax(180px, 1fr) 28px;
   column-gap: 14px;
 }
 
 /* Keep every product image inside the same visual area */
-.products-section .product-row-image {
+.products-page .products-section .product-row-image {
   width: 96px;
   height: 76px;
   object-fit: contain;
@@ -7819,12 +7820,33 @@ css
 }
 
 /* Prevent image scaling from pushing into the category label */
-.products-section .product-row-image img {
+.products-page .products-section .product-row-image img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   transform-origin: center;
 }
+/* Keep the category label in a consistent position */
+/* .products-section .product-row {
+  grid-template-columns: 42px 96px 132px minmax(180px, 1fr) minmax(180px, 1fr) 28px;
+  column-gap: 14px;
+} */
+
+/* Keep every product image inside the same visual area */
+/* .products-section .product-row-image {
+  width: 96px;
+  height: 76px;
+  object-fit: contain;
+  box-sizing: border-box;
+} */
+
+/* Prevent image scaling from pushing into the category label */
+/* .products-section .product-row-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+} */
 
 
 
